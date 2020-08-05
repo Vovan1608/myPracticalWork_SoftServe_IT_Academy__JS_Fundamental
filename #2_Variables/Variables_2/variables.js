@@ -1,7 +1,7 @@
 ﻿var myString = "Hello!";
 var myNumber = 38;
-alert("myString is " + myString);
-alert("myNumber is " + myNumber);
+alert("Variable myString = " + myString);
+alert("Variable myNumber = " + myNumber);
 myString = myNumber;
-alert("myString is " + myString);
-alert("myNumber is " + myNumber);
+alert("Now myString = " + myString);
+alert("Variable myNumber = " + myNumber);
