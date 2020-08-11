@@ -8,6 +8,6 @@ if(intA == intB && intB == intC){
     console.log("Serial number of a different number is 1.");
 }else if(intA == intB && intB == intD){
     console.log("Serial number of a different number is 3.");
-}else if(intA == intC && intC == intD){
+}else {
     console.log("Serial number of a different number is 2.");
 }
