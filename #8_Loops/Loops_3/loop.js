@@ -1,7 +1,7 @@
-﻿var intN = 123456789012345;
-var divider = 10;
-while( (intN / divider) > 0) {
-    numComponents = intN % divider;
-    console.log(numComponents);
-    intN = (intN - numComponents) / divider;
+﻿var a = 3;
+var b = 7;
+var counter = 0;
+for (var i = a; i <= b; i++){
+    counter += i;
 }
+console.log("Sum of all numbers from b till a is " + counter);
