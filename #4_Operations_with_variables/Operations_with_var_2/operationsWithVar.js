@@ -1,4 +1,4 @@
-﻿var twoDigitNum = prompt("Enter the two-digit number.");
+﻿var twoDigitNum = prompt("Enter the two-digit number.", "");
 var divider = 10;
 var dozensNum = parseInt( twoDigitNum / divider );
 console.log("Dozens of the two-digit number are: " + dozensNum);

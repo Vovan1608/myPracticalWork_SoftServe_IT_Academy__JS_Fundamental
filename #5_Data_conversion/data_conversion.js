@@ -13,6 +13,6 @@ var res3 = Boolean(x + y);
 console.log(res3); 
 console.log(typeof res3);
 
-var res4 = Math.sqrt(x - y);
+var res4 = Number( y - y) / Number(x - x);
 console.log(res4); 
 console.log(typeof res4); 
