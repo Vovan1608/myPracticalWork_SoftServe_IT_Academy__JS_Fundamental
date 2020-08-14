@@ -1,10 +1,10 @@
 ﻿function createArrayIterator(array) {
-    var index = -1;
-    
-    return function (){
-        index++;
-        return arr[index]; 
+    var i = -1;
+    function iterate (){
+        i++;
+        return array[i];
     }
+    return iterate;
 }
 
 var arr = [5, 3, 7];
