@@ -1,18 +1,35 @@
-﻿function calcRactParam(sideA, sideB){
-    if(sideA > 0 && sideB > 0){
-        function calcPerim(){
-            return 2 * (sideA + sideB);
+﻿function calcRactParam(){
+    var sideA = 0;
+    var sideB = 0;
+    
+    function checkA(newSide) {
+        if(newSide > 0){
+            sideA = newSide;
+        }else{
+            sideA = "wrong parameter";
         }
-
-        function calcArea(){
-            return sideA * sideB;
-        }
-
-        return [calcPerim,calcArea];
     }
+    function checkB(newSide) {
+        if(newSide > 0){
+            sideB = newSide;
+        }else{
+            sideB = "wrong parameter";
+        }
+    }
+
+    function calcPerim(){
+        return 2 * (sideA + sideB);
+    }
+
+    function calcArea(){
+        return sideA * sideB;
+    }
+
+    return [checkA, checkB, calcPerim, calcArea];
 } 
 
-var res = calcRactParam(4, 5);
-console.log(res[0]());
-console.log(res[1]());
-console.dir(res[0])
+var res = calcRactParam();
+res[0](2);
+res[1](7);
+console.log("Perimeter is " + res[2]());
+console.log("Area is " + res[3]());
