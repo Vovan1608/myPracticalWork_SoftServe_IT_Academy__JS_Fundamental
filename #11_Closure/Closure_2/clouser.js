@@ -3,12 +3,12 @@
     var sideB = 1;
     
     function checkA(newSide) {
-        if(newSide > 0){
+        if(newSide > 0 && typeof newSide == Number){
             sideA = newSide;
         }
     }
     function checkB(newSide) {
-        if(newSide > 0){
+        if(newSide > 0 typeof newSide == Number){
             sideB = newSide;
         }
     }
