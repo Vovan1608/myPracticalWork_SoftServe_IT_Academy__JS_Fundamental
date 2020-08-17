@@ -5,20 +5,20 @@
     function checkA(newSide) {
         if(newSide > 0){
             sideA = newSide;
-        }else{
-            sideA = "wrong parameter";
         }
     }
     function checkB(newSide) {
         if(newSide > 0){
             sideB = newSide;
-        }else{
-            sideB = "wrong parameter";
         }
     }
 
     function calcPerim(){
-        return 2 * (sideA + sideB);
+        if(sideA > 0 && sideB > 0){
+            return 2 * (sideA + sideB);
+        }else{
+            return 0;
+    }
     }
 
     function calcArea(){
@@ -30,6 +30,6 @@
 
 var res = calcRactParam();
 res[0](2);
-res[1](7);
+res[1](3);
 console.log("Perimeter is " + res[2]());
 console.log("Area is " + res[3]());
