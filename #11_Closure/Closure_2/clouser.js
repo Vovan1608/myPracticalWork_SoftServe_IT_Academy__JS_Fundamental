@@ -14,10 +14,10 @@
     }
 
     function calcPerim(){
-        if(sideA > 0 && sideB > 0){
-            return 2 * (sideA + sideB);
-        }else{
+        if(sideA <= 0 || sideB <= 0){
             return 0;
+        }else{
+            return 2 * (sideA + sideB);
     }
     }
 
