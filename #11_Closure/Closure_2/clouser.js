@@ -1,6 +1,6 @@
 ﻿function calcRactParam(){
-    var sideA = 0;
-    var sideB = 0;
+    var sideA = 1;
+    var sideB = 1;
     
     function checkA(newSide) {
         if(newSide > 0){
@@ -14,11 +14,7 @@
     }
 
     function calcPerim(){
-        if(sideA <= 0 || sideB <= 0){
-            return 0;
-        }else{
             return 2 * (sideA + sideB);
-    }
     }
 
     function calcArea(){
