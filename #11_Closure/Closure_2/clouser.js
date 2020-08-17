@@ -8,7 +8,7 @@
         }
     }
     function checkB(newSide) {
-        if(newSide > 0 typeof newSide == Number){
+        if(newSide > 0 && typeof newSide == Number){
             sideB = newSide;
         }
     }
