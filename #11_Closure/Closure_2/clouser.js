@@ -1,16 +1,19 @@
 ﻿function calcRactParam(){
-    var sideA = 1;
-    var sideB = 1;
+    var sideA = 0.000000001;
+    var sideB = 0.000000001;
     
     function checkA(newSide) {
-        if(newSide > 0 && typeof newSide == Number){
+        // результат typeof - строка, поэтому сравниваем со строкой 'number'
+        if( typeof newSide === 'number' && newSide > 0 ){
             sideA = newSide;
         }
+        
     }
     function checkB(newSide) {
-        if(newSide > 0 && typeof newSide == Number){
+        
+        if(typeof newSide === 'number' && newSide > 0){
             sideB = newSide;
-        }
+        } 
     }
 
     function calcPerim(){
