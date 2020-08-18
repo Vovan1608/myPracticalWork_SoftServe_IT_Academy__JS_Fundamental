@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        Задание 1.
+    </h3>
+    <p>
+        Есть следующий код:</br>
+        <span style="color: blue;">function</span> format (data, type) {</br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: green;">// Ваш код</span></br>
+        }</br>
+        <span style="color: blue;">var</span> originFormat = format;</br>
+        </br>
+        format("1", "number");</br>
+        console.log(format()); <span style="color: green;">// 1 </span></br>
+        console.log(typeof format()); <span style="color: green;">// "number"</span></br>
+        </br>
+        originFormat("Hello", "boolean");</br>
+        console.log(format());<span style="color: green;">// true </span> </br>
+        console.log(typeof format());<span style="color: green;">// "boolean"</span> </br>
+        </br>
+        originFormat(true, "string");</br>
+        console.log(format());<span style="color: green;">// "true"</span> </br>
+        console.log(typeof format());<span style="color: green;"> // "string"</span></br>
+        </br>
+        Допишите код, чтобы функция format(data, type) переопределяла себя в зависимости от параметра type:
+        <ul>
+            <li>
+                Если значением параметра type является строка "number", то переопределенная версия функции format() 
+                преобразует значение параметра data в число и возвращает результат;
+            </li>
+            <li>
+                Если значением параметра type является строка "string", то переопределенная версия функции format() 
+                преобразует значение параметра data в строку и возвращает результат;
+            </li>
+            <li>
+                Если значением параметра type является строка "boolean", то переопределенная версия функции format() 
+                преобразует значение параметра data в логическое значение и возвращает результат;
+            </li>
+            <li>
+                При других значениях параметра type функция format() не переопределяет себя.
+            </li>
+        </ul>
+    </p>
+    <script src="./overrid.js"></script>
+</body>
+</html>
