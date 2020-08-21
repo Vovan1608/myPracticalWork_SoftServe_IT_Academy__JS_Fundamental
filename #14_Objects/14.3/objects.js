@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-var mp3 = {
+var tv = {
     currentChannel: 1,
     nextChannel: function (){
         return tv.currentChannel++;

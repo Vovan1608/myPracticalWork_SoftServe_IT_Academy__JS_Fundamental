@@ -19,5 +19,3 @@ var mp3 = {
         return trek++;
     },
 }
-
-console.log(mp3);
