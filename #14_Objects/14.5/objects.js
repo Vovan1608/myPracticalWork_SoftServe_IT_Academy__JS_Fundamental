@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-var company ={
+var company = {
     employees: [
         {
             name: "John",
