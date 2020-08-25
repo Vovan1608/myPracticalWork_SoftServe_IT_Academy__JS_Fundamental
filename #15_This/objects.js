@@ -2,8 +2,8 @@
 
 var calculator = {
 
-    firstNum: this.firstNum,
-    secondNum: this.secondNum,
+    firstNum: 5,
+    secondNum: 9,
 
     read: function(){
         this.firstNum = Number(prompt("Введите первое число", "3"));
@@ -18,7 +18,6 @@ var calculator = {
         return this.firstNum * this.secondNum;
     },
 }
-
 calculator.read();
 console.log(calculator.sum());
 console.log(calculator.mul());
