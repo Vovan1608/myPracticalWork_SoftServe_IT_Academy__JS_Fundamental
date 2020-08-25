@@ -1,15 +1,13 @@
 ﻿'use strict';
 
 function isEmpty(obj){
-    var count = 0;
-    for (var key in obj){
-        count++;
+    
+    for(var key in obj){
+        if(obj[key]){
+            return false;
+        }
     }
-    if(count === 0){
-        return true;
-    }else{
-        return false;
-    }
+    return true;
 }
 
 var user = {
