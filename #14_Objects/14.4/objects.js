@@ -4,12 +4,12 @@ var mp3 = {
     volume: 1,
     trek: 1,
     volIncrease: function() {
-        return volume++;
+        volume++;
     },
     volDown: function(){
-        return volume--;
+        volume--;
     },
     forvard: function(){
-        return trek++;
+        trek++;
     },
 }
