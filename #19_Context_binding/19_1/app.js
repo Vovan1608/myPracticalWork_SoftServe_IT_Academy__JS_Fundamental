@@ -10,9 +10,9 @@ function format(beginMsg, endMsg) {
 user.func = format;
 
 var tomFormat = function(){
-    user.func("<<<", ">>>");
+    user.func;
 };
-tomFormat();
+tomFormat("<<<", ">>>");
 
 // var tomFormat = format.bind(user);
 // tomFormat ("<<<", ">>>"); // "<<<Tom>>>"
