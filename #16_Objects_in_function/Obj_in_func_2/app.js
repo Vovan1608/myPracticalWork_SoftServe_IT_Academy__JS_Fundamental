@@ -1,15 +1,11 @@
 ﻿'use strict';
 
 function getMaxSalarie(salaries){
-    var array = [];
+    var maxSalarie = 0;
     for(var key in salaries){
-        array.push(salaries[key]);
-    }
-    var maxSalarie = array[0];
-    for(var i = 1; i < array.length; i++){
-        if(maxSalarie < array[i]){
-            maxSalarie = array[i]
-        }
+        if(maxSalarie < salaries[key]){
+            maxSalarie = salaries[key];
+        }   
     }
     return maxSalarie;
 }
