@@ -7,6 +7,12 @@ function format(beginMsg, endMsg) {
     console.log(beginMsg + this.name + endMsg);
 }
 
-var tomFormat = f();
+user.func = format;
+
+var tomFormat = function(){
+    user.func("<<<", ">>>");
+};
+tomFormat();
+
 // var tomFormat = format.bind(user);
- tomFormat("<<<", ">>>"); // "<<<Tom>>>"
+// tomFormat ("<<<", ">>>"); // "<<<Tom>>>"
