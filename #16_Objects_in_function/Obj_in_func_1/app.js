@@ -5,13 +5,13 @@ function createMP3(volume, trek){
         volume: volume,
         trek: trek,
         volIncrease: function() {
-            return this.volume++;
+            this.volume++;
         },
         volDown: function(){
-            return this.volume--;
+            this.volume--;
         },
         forvard: function(){
-            return this.trek++;
+            this.trek++;
         }
     }
 }
