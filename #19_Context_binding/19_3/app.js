@@ -2,6 +2,9 @@
 
 function bind(func, context) {
     // Ваш код
+    return function(){
+        return func.call(context);
+    }
     
 }
 function func() {
@@ -13,3 +16,6 @@ var user = {
 };
 var f = bind(func, user);
 f(); // "Tom – 20"
+
+// var g = func.bind(user);
+// g();
