@@ -1,8 +1,10 @@
 ﻿'use strict';
 
 function Adder(firstNumber, secondNumber, result){
-    if(this.__firstNumberValid(firstNumber)){
+    if(this.__isNumber(firstNumber)){
         this.__firstNumber = firstNumber;
+    }else{
+        this.__firstNumber
     }
     if(this.__secondNumberValid(secondNumber)){
         this.__secondNumber = secondNumber;
@@ -23,8 +25,8 @@ Adder.prototype.firstNumber = function(firstNumber){
     }
 }
 
-Adder.prototype.__firstNumberValid = function(firstNumber){
-    if(typeof firstNumber === "number"){
+Adder.prototype.__isNumber = function(number){
+    if(typeof number === "number"){
         return true;
     }else{
         return false;
@@ -39,13 +41,13 @@ Adder.prototype.secondNumber = function(secondNumber){
     }
 }
 
-Adder.prototype.__secondNumberValid = function(secondNumber){
-    if(typeof secondNumber === "number"){
-        return true;
-    }else{
-        return false;
-    }
-}
+// Adder.prototype.__secondNumberValid = function(secondNumber){
+//     if(typeof secondNumber === "number"){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
 
 var res = new Adder(5, 10);
 console.log(res.__calc()); // 15 = 5 + 10

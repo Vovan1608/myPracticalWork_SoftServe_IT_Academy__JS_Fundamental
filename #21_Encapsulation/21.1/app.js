@@ -40,13 +40,12 @@ Pleer.prototype.soundVolume = function(soundVolume){
         if(this.__soundVolumeValid(soundVolume)){
             this.__soundVolume = soundVolume;
         }
-        return this.__soundVolume;
     }
 }
 
 var sony1 = new Pleer(23);
 console.log(sony1.soundVolume()); // 23
-console.log(sony1.soundVolume(25)); // 25
+sony1.soundVolume(25);
 console.log(sony1.soundVolume()); // 25
-console.log(sony1.soundVolume(125)); // 25
+sony1.soundVolume(125); // 25
 console.log(sony1.soundVolume()); // 25 
