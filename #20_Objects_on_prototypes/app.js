@@ -16,9 +16,6 @@ PleerMP3.prototype.forvard = function(){
 PleerMP3.prototype.installVolInc = function(){
     return this.volume;
 }
-PleerMP3.prototype.installVolD = function(){
-    return this.volume;
-}
 PleerMP3.prototype.installTrek = function(){
     return this.trek;
 }
