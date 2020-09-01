@@ -3,10 +3,12 @@
 function Pleer(soundVolume){
     if(this.__soundVolumeValid(soundVolume)){
         this.__soundVolume = soundVolume;
+    }else{
+        this.__soundVolume = 10;
     }
 }
 Pleer.prototype.__soundVolumeValid = function(soundVolume){
-    if(soundVolume >= 0 && soundVolume < 100){
+    if(soundVolume >= 0 && soundVolume <= 100){
         return true;
     } else{
         return false;
@@ -18,23 +20,27 @@ Pleer.prototype.getSoundVolume = function(){
 }
 Pleer.prototype.setSoundVolume = function(soundVolume){
     if(this.__soundVolumeValid(soundVolume)){
-        return this.__soundVolume = soundVolume;
+        this.__soundVolume = soundVolume;
     }
 }
 
 
 var sony = new Pleer(50);
-console.log(sony.setSoundVolume(36)); // 36
+console.log(sony.__soundVolume)
+sony.setSoundVolume(36); 
 console.log(sony.getSoundVolume()); // 36
-console.log(sony.setSoundVolume(126)); // undefined
+sony.setSoundVolume(126); 
 console.log(sony.getSoundVolume()); // 36 - осталось старое значение, т.к. 126 вне диапазона
 
 // uniform method
 Pleer.prototype.soundVolume = function(soundVolume){
     if(soundVolume === undefined){
         return this.__soundVolume;
-    }else if(this.__soundVolumeValid(soundVolume)){
-        return this.__soundVolume = soundVolume;
+    }else {
+        if(this.__soundVolumeValid(soundVolume)){
+            this.__soundVolume = soundVolume;
+        }
+        return this.__soundVolume;
     }
 }
 
@@ -42,5 +48,5 @@ var sony1 = new Pleer(23);
 console.log(sony1.soundVolume()); // 23
 console.log(sony1.soundVolume(25)); // 25
 console.log(sony1.soundVolume()); // 25
-console.log(sony1.soundVolume(125)); // undefined
+console.log(sony1.soundVolume(125)); // 25
 console.log(sony1.soundVolume()); // 25 
