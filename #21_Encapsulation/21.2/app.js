@@ -19,13 +19,10 @@ function Adder(firstNumber, secondNumber){
     this.result = 0;
 }
 
-
-Adder.prototype.sum = function(){
-    return this.result;
-}
 // 4. Приватный метод __calc(), который записывает в result сумму свойств __firstNumber и __secondNumber;
 Adder.prototype.__calc = function(){
     this.result = this.__firstNumber + this.__secondNumber;
+    return this.result;
 }
 
 // 5. методы геттер-сеттер для свойств __firstNumber и __secondNumber
@@ -60,4 +57,11 @@ Adder.prototype.__isNumber = function(number){
 
 var res = new Adder(5, 10);
 
-console.log(res.sum()); // 0 возвращает значение из 19 строки
+console.log(res.__calc());
+console.log(res.result);
+res.secondNumber(5)
+console.log(res.__calc());
+console.log(res.result);
+res.firstNumber(4)
+console.log(res.__calc());
+console.log(res.result);
