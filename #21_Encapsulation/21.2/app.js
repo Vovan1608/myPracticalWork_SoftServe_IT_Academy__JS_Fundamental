@@ -21,9 +21,7 @@ function Adder(firstNumber, secondNumber){
 
 
 Adder.prototype.sum = function(){
-    return function(){
-        return this.__calc();
-    }
+    return this.result;
 }
 // 4. Приватный метод __calc(), который записывает в result сумму свойств __firstNumber и __secondNumber;
 Adder.prototype.__calc = function(){
