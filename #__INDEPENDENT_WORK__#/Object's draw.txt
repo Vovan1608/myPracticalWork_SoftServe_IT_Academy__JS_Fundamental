@@ -1,0 +1,21 @@
+﻿1. Выбрать первое уст-во:
+   Звонок.
+2. Чертеж первого ус-ва:
+   класс  Bell
+	состояние:
+           _name : String
+           _vol : Number (0 - 20)
+           _melody : Number (0 - 10)
+        поведение:
+           getName(): String
+           on(): void
+           off(): void
+           isNumber(Number): Boolean
+           getVolume: Number
+           getMelody: Number
+           getRecord: Number
+           getRemove: void
+           
+           
+           
+           
