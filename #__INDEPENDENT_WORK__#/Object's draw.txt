@@ -3,19 +3,18 @@
 2. Чертеж первого ус-ва:
    класс  Bell
 	   состояние:
+         _name : String
          _volume : Number (0 - 20)
          _melody : Number (0 - 10)
          power : Boolean
-         memory: Number
       поведение:
+         getName: String
          on(): void
          off(): void
          _isNumber(Number): Boolean
-         getVolume: Number
+         getVolumeUp: Number
+         setVolumeUp: Number
+         getVolumeDown: Number
+         setVolumeDown: Number
          getMelody: Number
-         getRecord: Number
-         getRemove: void
-           
-           
-           
-           
+         setMelody: Number        
