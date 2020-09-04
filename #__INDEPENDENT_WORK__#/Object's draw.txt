@@ -4,17 +4,17 @@
    класс  Bell
 	   состояние:
          _name : String
+         _power : Boolean
          _volume : Number (0 - 20)
          _melody : Number (0 - 10)
-         power : Boolean
       поведение:
          getName: String
          on(): void
          off(): void
          _isNumber(Number): Boolean
          getVolumeUp: Number
-         setVolumeUp: Number
+         setVolumeUp(Number): void
          getVolumeDown: Number
-         setVolumeDown: Number
+         setVolumeDown(Number): void
          getMelody: Number
-         setMelody: Number        
+         setMelody(Number): void        
