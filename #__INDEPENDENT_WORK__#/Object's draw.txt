@@ -11,10 +11,10 @@
          getName: String
          on(): void
          off(): void
+         getPower: Boolean
          _isNumber(Number): Boolean
-         getVolumeUp: Number
+         getVolume: Number
          setVolumeUp(Number): void
-         getVolumeDown: Number
          setVolumeDown(Number): void
          getMelody: Number
          setMelody(Number): void        
