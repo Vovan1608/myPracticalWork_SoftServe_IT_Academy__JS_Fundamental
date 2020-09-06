@@ -53,7 +53,7 @@ Cube.prototype.constructor = Cube;
 // С расширением (использовать результат метода родителя для дальнейших расчетов).
 
 Cube.prototype.calcPerimeterCube = function(){
-    this.calcPerimeter();
+    Square.prototype.calcPerimeter.call(this);
     this.perimeter *= 3;
 }
 
