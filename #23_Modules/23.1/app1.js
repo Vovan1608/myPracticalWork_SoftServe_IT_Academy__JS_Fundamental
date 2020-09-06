@@ -15,14 +15,14 @@ var perimeter = (function(){
             }
         },
         setFirstSide: function(number){
-            if(isNumber(number)){
+            if(this.isNumber(number)){
                 firstSide = number;
             }else{
                 firstSide = 1;
             }
         },
         setSecondSide: function(number){
-            if(isNumber(number)){
+            if(this.isNumber(number)){
                 secondSide = number;
             }else{
                 secondSide = 1;

@@ -4,7 +4,7 @@ var area = (function(){
     var firstSide;
     var secondSide;
     function operation(){
-        return 2 * (firstSide + secondSide);
+        return firstSide * secondSide;
     }
     return{
         isNumber: function(number){
@@ -15,12 +15,12 @@ var area = (function(){
             }
         },
         setFirstSide: function(number){
-            if(isNumber(number)){
+            if(this.isNumber(number)){
                 firstSide = number;
             }
         },
         setSecondSide: function(number){
-            if(isNumber(number)){
+            if(this.isNumber(number)){
                 secondSide = number;
             }
         },

@@ -1,6 +1,9 @@
 ﻿'use strict';
 
-var firstSide = 3;
-var secondSide = 4;
+perimeter.setFirstSide(15);
+perimeter.setSecondSide(5);
 console.log(perimeter.operation());
+
+area.setFirstSide(15);
+area.setSecondSide(5);
 console.log(area.operation());
