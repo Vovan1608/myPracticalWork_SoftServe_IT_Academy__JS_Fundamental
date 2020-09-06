@@ -57,9 +57,5 @@ Cube.prototype.calcPerimeter = function(){
     this.perimeter *= 3;
 }
 
-Cube.prototype.getPerimeter = function(){
-    this.calcPerimeter();
-    return this.perimeter;
-}
 var c2 = new Cube(10);
 console.log(c2.getPerimeter());
