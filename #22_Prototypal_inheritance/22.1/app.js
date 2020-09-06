@@ -38,7 +38,7 @@ GeometricFigure.prototype.setCenterY = function(centerY){
     }
 }
 
-GeometricFigure.prototype.getCenterX = function(){
+GeometricFigure.prototype.getCenterY = function(){
     return this.__centerY;
 }
 
@@ -54,6 +54,7 @@ function Rectangle(centerX, centerY, diagonal){
 Rectangle.prototype = Object.create(GeometricFigure.prototype);
 Rectangle.prototype.constructor = Rectangle;
 
+// свой метод, т.к. сторона строго больше 0
 Rectangle.prototype.__isNumber = function (number) {
     if (typeof number === "number" && number > 0) {
         return true;
