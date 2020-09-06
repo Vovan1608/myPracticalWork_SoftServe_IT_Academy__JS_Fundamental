@@ -54,6 +54,14 @@ function Rectangle(centerX, centerY, diagonal){
 Rectangle.prototype = Object.create(GeometricFigure.prototype);
 Rectangle.prototype.constructor = Rectangle;
 
+Rectangle.prototype.__isNumber = function (number) {
+    if (typeof number === "number" && number > 0) {
+        return true;
+    }else{
+        return false;
+    }
+}
+
 Rectangle.prototype.setDiagonal = function(diagonal){
     if(this.__isNumber(this.__diagonal)){
         this.__diagonal = diagonal;
@@ -83,6 +91,8 @@ function Circle(centerX, centerY, radius){
 Circle.prototype = Object.create(GeometricFigure.prototype);
 Circle.prototype.constructor = Circle;
 
+Circle.prototype.__isNumber = Rectangle.prototype.__isNumber;
+
 Circle.prototype.setRadius = function(radius){
     if(this.__isNumber(this.__radius)){
         this.__radius = radius;
@@ -101,8 +111,8 @@ Circle.prototype.info = function (){
 }
 
 
-var ract = new Rectangle(3, 5, 8);
+var ract = new Rectangle(1, 6, 0);
 ract.info();
 
-var circ = new Circle(8, 9, 10);
+var circ = new Circle(4, 6, 10);
 circ.info()
