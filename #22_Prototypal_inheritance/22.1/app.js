@@ -23,7 +23,7 @@ GeometricFigure.prototype.__isNumber = function (number) {
 }
 
 GeometricFigure.prototype.setCenterX = function(centerX){
-    if(this.__isNumber(this.__centerX)){
+    if(this.__isNumber(centerX)){
         this.__centerX = centerX
     }
 }
@@ -33,7 +33,7 @@ GeometricFigure.prototype.getCenterX = function(){
 }
 
 GeometricFigure.prototype.setCenterY = function(centerY){
-    if(this.__isNumber(this.__centerY)){
+    if(this.__isNumber(centerY)){
         this.__centerY = centerY
     }
 }
@@ -63,7 +63,7 @@ Rectangle.prototype.__isNumber = function (number) {
 }
 
 Rectangle.prototype.setDiagonal = function(diagonal){
-    if(this.__isNumber(this.__diagonal)){
+    if(this.__isNumber(diagonal)){
         this.__diagonal = diagonal;
     }
 }
@@ -94,7 +94,7 @@ Circle.prototype.constructor = Circle;
 Circle.prototype.__isNumber = Rectangle.prototype.__isNumber;
 
 Circle.prototype.setRadius = function(radius){
-    if(this.__isNumber(this.__radius)){
+    if(this.__isNumber(radius)){
         this.__radius = radius;
     }
 }
@@ -111,7 +111,7 @@ Circle.prototype.info = function (){
 }
 
 
-var ract = new Rectangle(1, 6, 0);
+var ract = new Rectangle(1, 6, 5);
 ract.info();
 
 var circ = new Circle(4, 6, 10);

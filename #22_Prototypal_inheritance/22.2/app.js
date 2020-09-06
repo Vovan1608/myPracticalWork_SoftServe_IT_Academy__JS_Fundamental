@@ -17,7 +17,13 @@ Square.prototype.__isNumber = function(number){
 }
 
 Square.prototype.setSide = function(side){
-    if(this.__isNumber(this.__side)){
+    if(this.__isNumber(side)){
         this.__side = side;
     }
 }
+
+Square.prototype.getSide = function(){
+    return this.__side;
+}
+
+
