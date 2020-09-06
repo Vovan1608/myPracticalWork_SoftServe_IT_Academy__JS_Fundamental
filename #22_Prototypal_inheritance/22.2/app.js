@@ -47,7 +47,7 @@ Cube.prototype.constructor = Cube;
 //     this.perimeter = this.__side * 12;
 // }
 // var c = new Cube(5);
-// console.log(c.getPerimeter())
+// console.log(c.getPerimeter());
 
 
 // С расширением (использовать результат метода родителя для дальнейших расчетов).
@@ -62,4 +62,4 @@ Cube.prototype.getPerimeterCube = function(){
     return this.perimeter;
 }
 var c2 = new Cube(10);
-console.log(c2.getPerimeterCube())
+console.log(c2.getPerimeterCube());
