@@ -17,10 +17,14 @@ var area = (function(){
         setFirstSide: function(number){
             if(this.isNumber(number)){
                 firstSide = number;
+            }else{
+                firstSide = 1;
             }
         },
         setSecondSide: function(number){
             if(this.isNumber(number)){
+                secondSide = number;
+            }else{
                 secondSide = number;
             }
         },
