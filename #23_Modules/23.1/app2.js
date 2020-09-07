@@ -25,7 +25,7 @@ var area = (function(){
             if(this.isNumber(number)){
                 secondSide = number;
             }else{
-                secondSide = number;
+                secondSide = 1;
             }
         },
         operation: function(){
