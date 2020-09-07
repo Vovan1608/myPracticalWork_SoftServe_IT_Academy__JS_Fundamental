@@ -63,16 +63,6 @@ Rectangle.prototype.__isNumber = function (number) {
     }
 }
 
-Rectangle.prototype.getCenterX = function(){
-    GeometricFigure.prototype.getCenterX.call(this);
-    return this.__centerX;
-}
-
-Rectangle.prototype.getCenterY = function(){
-    GeometricFigure.prototype.getCenterY.call(this);
-    return this.__centerY;
-}
-
 Rectangle.prototype.setDiagonal = function(diagonal){
     if(this.__isNumber(diagonal)){
         this.__diagonal = diagonal;
@@ -85,8 +75,8 @@ Rectangle.prototype.getDiagonal = function(){
 
 Rectangle.prototype.info = function (){
     console.log("Rectangle: ");
-    console.log("X is: " + this.__centerX);
-    console.log("Y is: " + this.__centerY);
+    console.log("X is: " + GeometricFigure.prototype.getCenterX.call(this));
+    console.log("Y is: " + GeometricFigure.prototype.getCenterY.call(this));
     console.log("Diagonal is: " + this.__diagonal);
 }
 
@@ -104,16 +94,6 @@ Circle.prototype.constructor = Circle;
 
 Circle.prototype.__isNumber = Rectangle.prototype.__isNumber;
 
-Circle.prototype.getCenterX = function(){
-    GeometricFigure.prototype.getCenterX.call(this);
-    return this.__centerX;
-}
-
-Circle.prototype.getCenterY = function(){
-    GeometricFigure.prototype.getCenterY.call(this);
-    return this.__centerY;
-}
-
 Circle.prototype.setRadius = function(radius){
     if(this.__isNumber(radius)){
         this.__radius = radius;
@@ -126,12 +106,12 @@ Circle.prototype.getRadius = function(){
 
 Circle.prototype.info = function (){
     console.log("Circle:");
-    console.log("X is: " + this.__centerX);
-    console.log("Y is: " + this.__centerY);
+    console.log("X is: " + GeometricFigure.prototype.getCenterX.call(this));
+    console.log("Y is: " + GeometricFigure.prototype.getCenterY.call(this));
     console.log("Radius is: " + this.__radius);
 }
 
-var rect = new Rectangle(2, 5, 0);
+var rect = new Rectangle(7, 5, 3);
 rect.info();
 
 var circ = new Circle(4, 6, 10);
