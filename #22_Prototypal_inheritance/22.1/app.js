@@ -75,8 +75,8 @@ Rectangle.prototype.getDiagonal = function(){
 
 Rectangle.prototype.info = function (){
     console.log("Rectangle: ");
-    console.log("X is: " + GeometricFigure.prototype.getCenterX.call(this));
-    console.log("Y is: " + GeometricFigure.prototype.getCenterY.call(this));
+    console.log("X is: " + this.getCenterX());
+    console.log("Y is: " + this.getCenterY());
     console.log("Diagonal is: " + this.__diagonal);
 }
 
@@ -106,8 +106,8 @@ Circle.prototype.getRadius = function(){
 
 Circle.prototype.info = function (){
     console.log("Circle:");
-    console.log("X is: " + GeometricFigure.prototype.getCenterX.call(this));
-    console.log("Y is: " + GeometricFigure.prototype.getCenterY.call(this));
+    console.log("X is: " + this.getCenterX());
+    console.log("Y is: " + this.getCenterY());
     console.log("Radius is: " + this.__radius);
 }
 
