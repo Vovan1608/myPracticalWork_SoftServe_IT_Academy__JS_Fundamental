@@ -111,9 +111,13 @@ Circle.prototype.info = function (){
     console.log("Radius is: " + this.__radius);
 }
 
+var gf = new GeometricFigure(555,666);
+console.log(gf.getCenterX(), gf.getCenterY());
 
-var ract = new Rectangle(1, 6, 5);
+var ract = new Rectangle(2, 5, 0);
 ract.info();
 
 var circ = new Circle(4, 6, 10);
 circ.info()
+var gf = new GeometricFigure(555,666);
+console.log(gf.getCenterX(), gf.getCenterY());

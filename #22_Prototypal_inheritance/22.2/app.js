@@ -2,9 +2,9 @@
 
 function Square(side){
     if(this.__isNumber(side)){
-        this.__side = side;
+        this._side = side;
     }else{
-        this.__side = 1;
+        this._side = 1;
     }
 }
 
@@ -18,20 +18,16 @@ Square.prototype.__isNumber = function(number){
 
 Square.prototype.setSide = function(side){
     if(this.__isNumber(side)){
-        this.__side = side;
+        this._side = side;
     }
 }
 
 Square.prototype.getSide = function(){
-    return this.__side;
+    return this._side;
 }
 
 Square.prototype.calcPerimeter = function(){
-    this.perimeter = this.__side * 4;
-}
-
-Square.prototype.getPerimeter = function(){
-    this.calcPerimeter();
+    this.perimeter = this._side * 4;
     return this.perimeter;
 }
 
@@ -44,10 +40,11 @@ Cube.prototype.constructor = Cube;
 
 // Без расширения (полностью переопределить метод родителя)
 // Cube.prototype.calcPerimeter = function(){
-//     this.perimeter = this.__side * 12;
+//     this.perimeter = this._side * 12;
+//     return this.perimeter;
 // }
 // var c = new Cube(5);
-// console.log(c.getPerimeter());
+// console.log(c.calcPerimeter());
 
 
 // С расширением (использовать результат метода родителя для дальнейших расчетов).
@@ -55,7 +52,8 @@ Cube.prototype.constructor = Cube;
 Cube.prototype.calcPerimeter = function(){
     Square.prototype.calcPerimeter.call(this);
     this.perimeter *= 3;
+    return this.perimeter;
 }
 
 var c2 = new Cube(10);
-console.log(c2.getPerimeter());
+console.log(c2.calcPerimeter());
