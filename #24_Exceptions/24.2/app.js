@@ -1,59 +1,28 @@
 ﻿'use strict';
 
-function Square(side){
-    if(this.__isNumber(side)){
-        this._side = side;
+function sumSliceArray(arr, first, second){
+    var sum = arr[first - 1] + arr[second - 1];
+    
+    if(typeof first !== "number" || typeof second !== "number"){
+        throw new Error ("Введено не число");
+    }else if(first > arr.length || second > arr.length || first <= 0 || second <= 0){
+        throw new Error ("Число вне диапазона массива");
     }else{
-        this._side = 1;
+        return sum;
     }
 }
 
-Square.prototype.__isNumber = function(number){
-    if (typeof number === "number" && number > 0) {
-        return true;
-    }else{
-        return false;
+function check(sumSliceArray){
+    if(
+        typeof first === "number" &&
+        typeof second === "number" &&
+        first <= arr.length &&
+        second <= arr.length &&
+        first > 0 && second > 0
+    ){
+        return ;
     }
 }
 
-Square.prototype.setSide = function(side){
-    if(this.__isNumber(side)){
-        this._side = side;
-    }
-}
-
-Square.prototype.getSide = function(){
-    return this._side;
-}
-
-Square.prototype.getPerimeter = function(){
-    this.perimeter = this._side * 4;
-    return this.perimeter;
-}
-
-function Cube(side){
-    Square.call(this, side);
-}
-
-Cube.prototype = Object.create(Square.prototype);
-Cube.prototype.constructor = Cube;
-
-// Без расширения (полностью переопределить метод родителя)
-// Cube.prototype.getPerimeter = function(){
-//     this.perimeter = this._side * 12;
-//     return this.perimeter;
-// }
-// var c = new Cube(5);
-// console.log(c.getPerimeter());
-
-
-// С расширением (использовать результат метода родителя для дальнейших расчетов).
-
-Cube.prototype.getPerimeter = function(){
-    Square.prototype.getPerimeter.call(this);
-    this.perimeter *= 3;
-    return this.perimeter;
-}
-
-var c2 = new Cube(10);
-console.log(c2.getPerimeter());
+var sum = check(sumSliceArray([2, 4, 5, 7, 10], 1, 5));
+console.log(sum);
