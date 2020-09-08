@@ -1,14 +1,13 @@
 ﻿'use strict';
 
 function sumSliceArray(arr, first, second){
-    var sum;
     
     if(typeof first !== "number" || typeof second !== "number"){
         throw new Error ("Введено не число");
     }else if(first > arr.length || second > arr.length || first <= 0 || second <= 0){
         throw new Error ("Число вне диапазона массива");
     }else{
-        return sum = arr[first - 1] + arr[second - 1];
+        return arr[first - 1] + arr[second - 1];
     }
 }
 
