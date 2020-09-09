@@ -11,6 +11,9 @@ function sumSliceArray(arr, first, second){
     }
 }
 
-
 var sum = sumSliceArray([2, 4, 5, 7, 10], 1, 5);
+
+// Я НЕ ЗНАЮ, ЧТО ПИСАТЬ ТУТ. Я не понимаю , 
+// как взять параметрі first и second прям здесь.
+
 console.log(sum);
