@@ -2,7 +2,7 @@
 
 function Bell(name){
     this._name = name;
-    this._power = false;
+    this._power = true;
     this._volume = 5;
     this._melody = 1;
 }
@@ -36,12 +36,32 @@ Bell.prototype.getVolume = function(){
 }
 
 Bell.prototype.volumeUp = function(){
-    ++this._volume;
+    if(this._volume >= 0 && this._volume <= 20){
+        this._volume++;
+    }else{
+        this._volume = 0;
+    }
 }
 
 Bell.prototype.volumeDown = function(){
-    --this._volume;
+    if(this._volume < 0 || this._volume > 20){
+        this._volume = 0;
+    }else{
+        this._volume--;
+    }
 }
 
+Bell.prototype.getMelody = function(){
+    return this._melody;
+}
 
+Bell.prototype.setMelody = function(number){
+    if(this._isNumber(number) && number >=0 && number <= 10){
+        this._melody = number;
+    }else{
+        this._melody = 1;
+    }
+}
 
+var myBell = new Bell("MyModel");
+console.log(myBell)
