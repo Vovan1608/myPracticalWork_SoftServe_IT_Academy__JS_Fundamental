@@ -11,12 +11,11 @@ function sumSliceArray(arr, first, second){
     ){
         first = 1;
         second = arr.length;
-        return arr[first - 1] + arr[second - 1];
-    }else{
-        return arr[first - 1] + arr[second - 1];
     }
+    
+    return arr[first - 1] + arr[second - 1];
 }
 
-var sum = sumSliceArray.apply(null, [[2, 4, 5, 7, 10], 11, 5]);
+var sum = sumSliceArray.apply(null, [[2, 4, 5, 7, 10], 1, 5]);
 
 console.log(sum);
