@@ -14,7 +14,7 @@
          getPower: Boolean
          _isNumber(Number): Boolean
          getVolume: Number
-         setVolumeUp(Number): void
-         setVolumeDown(Number): void
+         VolumeUp(Number): void
+         VolumeDown(Number): void
          getMelody: Number
          setMelody(Number): void        
