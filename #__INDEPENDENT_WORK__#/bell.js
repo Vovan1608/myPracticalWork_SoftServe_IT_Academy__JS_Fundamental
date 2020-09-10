@@ -36,7 +36,7 @@ Bell.prototype.getVolume = function(){
 }
 
 Bell.prototype.volumeUp = function(){
-    if(this._volume >= 0 && this._volume < 21){
+    if(this._volume < 20){
         this._volume++;
     }else{
         this._volume = 0;
@@ -44,9 +44,7 @@ Bell.prototype.volumeUp = function(){
 }
 
 Bell.prototype.volumeDown = function(){
-    if(this._volume < 0 || this._volume > 20){
-        this._volume = 0;
-    }else{
+    if(this._volume > 0 && this._volume <= 20){
         this._volume--;
     }
 }
@@ -58,8 +56,6 @@ Bell.prototype.getMelody = function(){
 Bell.prototype.setMelody = function(number){
     if(this._isNumber(number) && number >=0 && number <= 10){
         this._melody = number;
-    }else{
-        this._melody = 1;
     }
 }
 
