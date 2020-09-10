@@ -36,7 +36,7 @@ Bell.prototype.getVolume = function(){
 }
 
 Bell.prototype.volumeUp = function(){
-    if(this._volume >= 0 && this._volume <= 20){
+    if(this._volume >= 0 && this._volume < 21){
         this._volume++;
     }else{
         this._volume = 0;
