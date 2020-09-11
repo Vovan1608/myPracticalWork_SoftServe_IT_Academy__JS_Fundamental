@@ -2,7 +2,7 @@
 
 // Ваш код
 Array.prototype.sortDesc = function(){
-    this.arr
+    
 }
 
 
