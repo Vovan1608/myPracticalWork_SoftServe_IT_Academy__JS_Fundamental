@@ -2,9 +2,7 @@
 
 // Ваш код
 Array.prototype.sortDesc = function(){
-    let arr = [];
-    this.arr = arr.sort().reverse();
-    return this.arr;
+    this.arr
 }
 
 
