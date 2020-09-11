@@ -2,8 +2,11 @@
 
 function addTwoDays(date){
     date = new Date();
-    date.setHours(48)
-    console.log(date)
+    let myDate = new Date();
+    let setMyDate = date.getDate() + 2;
+    myDate.setDate(setMyDate);
+    console.log(date);
+    console.log(myDate);
 }
 
 addTwoDays();
