@@ -1,15 +1,12 @@
 ﻿'use strict';
 
-// Ваш код
-// Array.prototype.sortDesc = function(){
-    
-// }
+var arr = ["Tom", "Sam", "Bob"];
+var arrLength = [];
+arrLength = arr.map(function(elem){
+    return ("<li>" + elem + "</li>");
+})
 
-function sortDesc(){
-    let arr = [];
-    arr.sort().reverse();
-    return arr;
-}
-let arr = [5, 1, 4, 2, 3];
-arr.sortDesc();
-console.log(arr); // [5, 4, 3, 2, 1]
+// for (var i = 0; i < arr.length; i++) {
+//     arrLength[i] = "<li>" + arr[i] + "</li>";
+// }
+console.log(arrLength); // ["<li>Tom</li>", "<li>Sam</li>", "<li>Bob</li>"]
