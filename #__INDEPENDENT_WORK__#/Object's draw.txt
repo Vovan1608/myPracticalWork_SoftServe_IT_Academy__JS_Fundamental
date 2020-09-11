@@ -24,31 +24,25 @@
    Часы.
 5. Чертеж второго устройства:
    класс Clock
-         состояние:
-            _name: String
-            _power: Boolean
-            _brightness: Number(0 - 5)
-            _hour: Number(0 -23)
-            _minute: Number(0 - 59)
-            _melody: Number
-            _alarm: Boolean
-            _volume: Number(0 - 5)
-         поведение:
-            getName: String
-            on: void
-            off: void
-            getPower: Boolean
-            _isNumber: Boolean
-            getBrightness: Number
-            setBrightness(Number): void
-            getHour: Number
-            setHour(Number): void
-            getMinute: Number
-            setMinute(Number): void
-            getMelody: Number
-            setMelody(Number): void
-            getAlram: Number
-            setAlarm(Number): void
-            getVolume: Number
-            volumeUp: void
-            volumeDown: void
+      состояние:
+         _name: String
+         _power: Boolean
+         _hour: Number(1 - 24)
+         _minute: Number(1 - 60)
+         _melody: Number(1)
+         _alarm: Number
+      поведение:
+         getName: String
+         on: void
+         off: void
+         getPower: Boolean
+         _isNumber: Boolean
+         getHour: Number
+         setHour(Number): void 
+         getMinute: Number
+         setMinute(Number): void
+         getMelody: Number
+         getAlram: Number   (если время будильника совпало с текущим временем, 
+                             то вкл. будильник с _melody)
+         setAlarm(Number): void (использовать методы setHour и setMinute)
+         
