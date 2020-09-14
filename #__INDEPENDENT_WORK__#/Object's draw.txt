@@ -39,3 +39,5 @@
          setHours(Number): void 
          setMinutes(Number): void
          getTime: (Number) (_minutes + _hours)
+         getMelody: Number
+         setMelody(Number): void
