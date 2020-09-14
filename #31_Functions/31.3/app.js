@@ -3,7 +3,7 @@
 let server = {
     data: 0,
     convertToString: function (callback) {
-        callback( () => { return this.data + "";});
+        callback( () => this.data + "");
     }
 };
 let client = {
@@ -14,7 +14,7 @@ let client = {
         this.server.convertToString(this.notification());
     },
     notification: function () {
-        return (callback => { this.result = callback()});
+        return (callback => this.result = callback());
     }
 };
 client.calc(123);
