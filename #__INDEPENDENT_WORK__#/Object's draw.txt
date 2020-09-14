@@ -27,8 +27,8 @@
       состояние:
          _name: String
          _power: Boolean
-         _hour: Number(0 - 23)
-         _minute: Number(0 - 59)
+         _hours: Number(0 - 23)
+         _minutes: Number(0 - 59)
          _melody: Number(1)
          _alarm: Number
       поведение:
@@ -37,14 +37,8 @@
          off: void
          getPower: Boolean
          _isNumber: Boolean
-         getHour: Number
-         setHour(Number): void 
-         getMinute: Number
-         setMinute(Number): void
-         getTime: (Number) (getMinute + getHour)
-         getMelody: Number
-         getAlram: Number   (если время будильника совпало с текущим временем, 
-                             то вкл. будильник с _melody; использовать
-                             getMinute и getHour)
+         setHours(Number): void 
+         setMinutes(Number): void
+         getTime: (Number) (_minutes + _hours)
          setAlarm(Number): void (использовать методы setHour и setMinute)
-         
+         getAlram: Number (будильник с _melody; обратный отсчет)

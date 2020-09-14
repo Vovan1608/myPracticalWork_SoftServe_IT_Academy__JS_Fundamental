@@ -2,8 +2,8 @@
 
 // Ваш код
 Array.prototype.sortDesc = function(){
-    this.sort.call(this);
-    this.reverse.call(this);
+    this.sort();
+    this.reverse();
     return this.arr;
 }
 
