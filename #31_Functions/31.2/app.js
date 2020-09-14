@@ -4,7 +4,7 @@ let obj = {
     name: "obj",
     print: function () {
        // Ваш код
-        return  () => console.log (this.name);git 
+        return  () => console.log (this.name);
     }
 };
 function multiCaller(func, count) {
