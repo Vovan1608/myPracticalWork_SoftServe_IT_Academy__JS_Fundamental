@@ -29,8 +29,7 @@
          _power: Boolean
          _hours: Number(0 - 23)
          _minutes: Number(0 - 59)
-         _melody: Number(1)
-         _alarm: Number
+         _melody : Number (0 - 10)
       поведение:
          getName: String
          on: void
@@ -40,5 +39,3 @@
          setHours(Number): void 
          setMinutes(Number): void
          getTime: (Number) (_minutes + _hours)
-         setAlarm(Number): void (использовать методы setHours и setMinutes)
-         getAlram: Number (будильник с _melody; обратный отсчет)

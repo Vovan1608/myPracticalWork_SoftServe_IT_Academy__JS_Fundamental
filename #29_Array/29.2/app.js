@@ -4,7 +4,6 @@
 Array.prototype.sortDesc = function(){
     this.sort();
     this.reverse();
-    return this.arr;
 }
 
 let arr = [5, 1, 4, 2, 3];
