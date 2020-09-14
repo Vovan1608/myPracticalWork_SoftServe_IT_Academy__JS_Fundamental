@@ -40,5 +40,5 @@
          setHours(Number): void 
          setMinutes(Number): void
          getTime: (Number) (_minutes + _hours)
-         setAlarm(Number): void (использовать методы setHour и setMinute)
+         setAlarm(Number): void (использовать методы setHours и setMinutes)
          getAlram: Number (будильник с _melody; обратный отсчет)
