@@ -89,7 +89,33 @@ Clock.prototype.getTime = function (){
     return (this._hours + ":" + this._minutes);
 }
 
-let b = new Bell("sony")
-console.log(b)
-let c = new Clock("clock")
-console.log(c)
+function SmartHouse(name){
+    this._name = name;
+    this._devices = [];
+}
+
+SmartHouse.prototype.getName = function(){
+    return this._name;
+}
+
+SmartHouse.prototype.addDevice = function(device){
+    this._devices.push(device);
+}
+
+SmartHouse.prototype.getDevices = function(){
+    return this._devices;
+}
+
+SmartHouse.prototype.getDeviceByName = function(name){
+    
+}
+
+
+
+var sh = new SmartHouse("Name1");
+sh.addDevice(new Bell("Sony"));
+sh.addDevice(new Clock("Citizen"));
+// console.log(sh.getDevices());
+// console.log(sh.getDeviceByName("Lamp2"));
+// sh.getDeviceByName("Lamp2").on();
+// sh.offAllDevice();
