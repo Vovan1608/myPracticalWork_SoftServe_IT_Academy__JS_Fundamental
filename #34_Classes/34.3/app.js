@@ -19,26 +19,22 @@ class Square{
     get side (){
         return this._side;
     }
-    perimeter(){
-        this.perimeter = this._side * 4;
-        return this.perimeter;
+    calcPerimeter(){
+        return this._side * 4;
     }
 }
 
 class Cube extends Square{
 
     // Без расширения (полностью переопределить метод родителя)
-    // perimeter(){
-    //     this.perimeter = this._side * 12;
-    //     return this.perimeter;
+    // calcPerimeter(){
+    //     return this._side * 12;
     // }
     // С расширением (использовать результат метода родителя для дальнейших расчетов).
-    perimeter (){
-        super.perimeter();
-        this.perimeter *= 3;
-        return this.perimeter;
+    calcPerimeter (){
+        return super.calcPerimeter() * 3;
     }
 }
 
 var c = new Cube(5);
-console.log(c.perimeter());
+console.log(c.calcPerimeter());
