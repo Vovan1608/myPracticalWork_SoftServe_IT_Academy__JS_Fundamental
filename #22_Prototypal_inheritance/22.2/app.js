@@ -27,8 +27,7 @@ Square.prototype.getSide = function(){
 }
 
 Square.prototype.getPerimeter = function(){
-    this.perimeter = this._side * 4;
-    return this.perimeter;
+    return this._side * 4;
 }
 
 function Cube(side){
@@ -40,8 +39,7 @@ Cube.prototype.constructor = Cube;
 
 // Без расширения (полностью переопределить метод родителя)
 // Cube.prototype.getPerimeter = function(){
-//     this.perimeter = this._side * 12;
-//     return this.perimeter;
+//     return this._side * 12;
 // }
 // var c = new Cube(5);
 // console.log(c.getPerimeter());
@@ -50,9 +48,7 @@ Cube.prototype.constructor = Cube;
 // С расширением (использовать результат метода родителя для дальнейших расчетов).
 
 Cube.prototype.getPerimeter = function(){
-    Square.prototype.getPerimeter.call(this);
-    this.perimeter *= 3;
-    return this.perimeter;
+    return Square.prototype.getPerimeter.call(this) * 3;
 }
 
 var c2 = new Cube(10);
