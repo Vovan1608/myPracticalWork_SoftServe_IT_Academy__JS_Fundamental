@@ -41,3 +41,18 @@
          getTime: (Number) (_minutes + _hours)
          getMelody: Number
          setMelody(Number): void
+6. Набор кода для второго устройства (прототипное ООП)
+7. Общий код двух устройств выносим в класс родитель (наследнование)
+8. Чертеж класса Дом
+   класс SmartHouse
+      состояние
+         _name: String
+         _devices: [Object]
+      поведение
+         getName(): String
+         addDevice(device): void
+         getDevices(): [Object]
+         getDeviceByName(name): Object
+         deleteDeviceByName(name): void
+         offAllDevice(): void
+9. Набор кода для класса Дом
