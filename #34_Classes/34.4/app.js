@@ -7,17 +7,15 @@ class Circle{
         this._radius = radius;
     }
     calcCircumference(){
-        let circumference = 2 * this._radius * Math.PI;
-        return circumference;
+        return 2 * this._radius * Math.PI;
     }
     static calcCircuit(radius){
         return 2 * radius * Math.PI;
     }
     copyCircle(){
-        let copy = Object.assign({}, this);
-        return copy;
+        return Object.assign({}, this);
     }
-    static clonCircle(centerX, centerY, radius){
+    static getCircle(centerX, centerY, radius){
         let circle = {
             centerX,
             centerY,
@@ -26,13 +24,25 @@ class Circle{
         return circle;
     }
     isInCircle(x, y){
-        
+        if(
+            Math.abs(this._centerX - x) < this._radius &&
+            Math.abs(this._centerY - y) < this._radius
+        ){
+            console.log(`Точка (${x}, ${y}) попадает в круг.`);
+        }else{
+            console.log(`Точка (${x}, ${y}) не попадает в круг.`);
+        }
+    }
+    toString(){
+        return `centerX: ${this._centerX}, centerY: ${this._centerY}, radius: ${this._radius}`;
     }
 }
 
-let c = new Circle(5, 5, 6);
+let c = new Circle(1, 7, 3);
 console.log(c);
 console.log(c.calcCircumference())
 console.log(Circle.calcCircuit(5))
 console.log(c.copyCircle())
-console.log(Circle.clonCircle(2, 3, 6))
+console.log(Circle.getCircle(2, 3, 6))
+c.isInCircle(-2, 4)
+console.log(c.toString())
