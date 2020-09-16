@@ -13,11 +13,7 @@ class Circle{
         return 2 * radius * Math.PI;
     }
     copyCircle(){
-        return new Circle(
-            Object.assign({}, this)._centerX, 
-            Object.assign({}, this)._centerY, 
-            Object.assign({}, this)._radius
-        );
+        return new Circle(this._centerX, this._centerY, this._radius);
     }
     static getCircle(centerX, centerY, radius){
         return new Circle(centerX, centerY, radius);
