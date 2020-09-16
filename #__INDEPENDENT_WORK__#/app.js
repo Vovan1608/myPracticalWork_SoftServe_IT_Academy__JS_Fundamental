@@ -122,6 +122,13 @@ SmartHouse.prototype.deleteDeviceByName = function(name){
     }), 1);
 }
 
+SmartHouse.prototype.offAllDevice = function(){
+    this._devices.forEach(function(item){
+        this._power = false;
+        return item;
+    });
+}
+
 
 
 var sh = new SmartHouse("My house");
@@ -129,7 +136,6 @@ sh.addDevice(new Bell("Sony"));
 sh.addDevice(new Clock("Citizen"));
 console.log(sh.getDevices());
 console.log(sh.getDeviceByName("Citizen"));
-sh.deleteDeviceByName("Citizen");
+sh.getDeviceByName("Sony").on();
+sh.offAllDevice();
 console.log(sh.getDevices());
-// sh.getDeviceByName("Lamp2").on();
-// sh.offAllDevice();
