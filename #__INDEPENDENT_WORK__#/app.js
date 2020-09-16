@@ -107,15 +107,21 @@ SmartHouse.prototype.getDevices = function(){
 }
 
 SmartHouse.prototype.getDeviceByName = function(name){
-    
+    return this._devices.find(function(item){
+        if(item._name == name){
+            return item;
+        }
+    });
 }
 
 
 
-var sh = new SmartHouse("Name1");
+
+
+var sh = new SmartHouse("My house");
 sh.addDevice(new Bell("Sony"));
 sh.addDevice(new Clock("Citizen"));
-// console.log(sh.getDevices());
-// console.log(sh.getDeviceByName("Lamp2"));
+console.log(sh.getDevices());
+console.log(sh.getDeviceByName("Citizen"));
 // sh.getDeviceByName("Lamp2").on();
 // sh.offAllDevice();
