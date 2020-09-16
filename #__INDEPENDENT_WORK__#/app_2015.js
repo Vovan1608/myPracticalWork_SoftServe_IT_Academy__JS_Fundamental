@@ -29,7 +29,7 @@ class Device{
         return this._melody;
     }
     set melody(number){
-        if(this.isNumber(number) && number >=0 && number <= 10){
+        if(Device.isNumber(number) && number >=0 && number <= 10){
             this._melody = number;
         }
     }
@@ -62,12 +62,12 @@ class Clock extends Device{
         this._minutes = 0;
     }
     setHours(number){
-        if(this.isNumber(number) && number >=0 && number <= 23){
+        if(Device.isNumber(number) && number >=0 && number <= 23){
             this._hours = number;
         }
     }
     setMinutes(number){
-        if(this.isNumber(number) && number >=0 && number <= 59){
+        if(Device.isNumber(number) && number >=0 && number <= 59){
             this._minutes = number;
         }
     }
