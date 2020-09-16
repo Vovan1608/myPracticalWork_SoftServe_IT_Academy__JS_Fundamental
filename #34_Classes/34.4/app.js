@@ -13,10 +13,11 @@ class Circle{
         return 2 * radius * Math.PI;
     }
     copyCircle(){
-        return Object.assign({}, this);
+        let clon = Object.assign({}, this);
+        return new Circle(clon._centerX, clon._centerY, clon._radius);
     }
     static getCircle(centerX, centerY, radius){
-        return {this};
+        return new Circle(centerX, centerY, radius);
     }
     isInCircle(x, y){
         if(
@@ -39,7 +40,8 @@ console.log(c);
 
 // console.log(c.calcCircumference())
 // console.log(Circle.calcCircuit(5))
-console.log(c.copyCircle())
+console.log(Circle.getCircle(3, 5, 8))
 // console.log(Circle.getCircle(2, 3, 6))
 // console.log(c.isInCircle(-2, 4),)
 // console.log(c.toString())
+console.log(c.copyCircle())
