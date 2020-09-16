@@ -107,28 +107,26 @@ SmartHouse.prototype.getDevices = function(){
 }
 
 SmartHouse.prototype.getDeviceByName = function(name){
-    return this._devices.find(function(item){
-        if(item._name == name){
+    return this.getDevices().find(function(item){
+        if(item.getName() == name){
             return item;
         }
     });
 }
 
 SmartHouse.prototype.deleteDeviceByName = function(name){
-    this._devices.splice(this._devices.findIndex(function(item){
-        if(item._name == name){
+    this.getDevices().splice(this.getDevices().findIndex(function(item){
+        if(item.getName() == name){
             return item;
         }
     }), 1);
 }
 
 SmartHouse.prototype.offAllDevice = function(){
-    this._devices.forEach(function(item){
-        item._power = false;
+    this.getDevices().forEach(function(item){
+        item.off();
     });
 }
-
-
 
 var sh = new SmartHouse("My house");
 sh.addDevice(new Bell("Sony"));
