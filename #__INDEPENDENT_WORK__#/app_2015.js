@@ -85,7 +85,7 @@ class SmartHouse{
         return this._name;
     }
     addDevice(device){
-        this._devices.push(device);
+        this.getDevices().push(device);
     }
     getDevices(){
         return this._devices;
