@@ -13,8 +13,11 @@ class Circle{
         return 2 * radius * Math.PI;
     }
     copyCircle(){
-        let clon = Object.assign({}, this);
-        return new Circle(clon._centerX, clon._centerY, clon._radius);
+        return new Circle(
+            Object.assign({}, this)._centerX, 
+            Object.assign({}, this)._centerY, 
+            Object.assign({}, this)._radius
+        );
     }
     static getCircle(centerX, centerY, radius){
         return new Circle(centerX, centerY, radius);
