@@ -124,8 +124,7 @@ SmartHouse.prototype.deleteDeviceByName = function(name){
 
 SmartHouse.prototype.offAllDevice = function(){
     this._devices.forEach(function(item){
-        this._power = false;
-        return item;
+        item._power = false;
     });
 }
 
