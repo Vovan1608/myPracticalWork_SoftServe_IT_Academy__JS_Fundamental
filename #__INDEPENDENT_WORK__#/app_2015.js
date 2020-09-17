@@ -72,7 +72,7 @@ class Clock extends Device{
         }
     }
     get time(){
-        return (this._hours + ":" + this._minutes);
+        return (`${this._hours} : ${this._minutes}`);
     }
 }
 
