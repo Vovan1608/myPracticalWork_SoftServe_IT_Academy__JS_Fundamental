@@ -13,7 +13,7 @@ class Device{
             return false;
         }
     }
-    getName(){
+    get name(){
         return this._name
     }
     on(){
@@ -22,7 +22,7 @@ class Device{
     off(){
         this._power = false;
     }
-    getPower(){
+    get power(){
         return this._power;
     }
     get melody(){
@@ -40,7 +40,7 @@ class Bell extends Device{
         super(name);
         this._volume = 5;
     }
-    getVolume(){
+    get volume(){
         return this._volume;
     }
     volumeUp(){
@@ -61,17 +61,17 @@ class Clock extends Device{
         this._hours = 0;
         this._minutes = 0;
     }
-    setHours(number){
+    set hours(number){
         if(Device.isNumber(number) && number >=0 && number <= 23){
             this._hours = number;
         }
     }
-    setMinutes(number){
+    set minutes(number){
         if(Device.isNumber(number) && number >=0 && number <= 59){
             this._minutes = number;
         }
     }
-    getTime(){
+    get time(){
         return (this._hours + ":" + this._minutes);
     }
 }
@@ -81,39 +81,39 @@ class SmartHouse{
         this._name = name;
         this._devices = [];
     }
-    getName(){
+    get name(){
         return this._name;
     }
     addDevice(device){
         this._devices.push(device);
     }
-    getDevices(){
+    get devices(){
         return this._devices;
     }
     getDeviceByName(name){
-        return this.getDevices().find(item =>{
-            if(item.getName() == name){
+        return this.devices.find(item =>{
+            if(item.name == name){
                 return item;
             }
         });
     }
     deleteDeviceByName(name){
-        this.getDevices().splice(this.getDevices().findIndex(item => {
-            if(item.getName() == name){
+        this.devices.splice(this.devices.findIndex(item => {
+            if(item.name == name){
                 return item;
             }
         }), 1);
     }
     offAllDevice(){
-        this.getDevices().forEach(item => item.off());
+        this.devices.forEach(item => item.off());
     }
 }
 
 var sh = new SmartHouse("My house");
 sh.addDevice(new Bell("Sony"));
 sh.addDevice(new Clock("Citizen"));
-console.log(sh.getDevices());
+console.log(sh.devices);
 console.log(sh.getDeviceByName("Citizen"));
 sh.getDeviceByName("Sony").on();
 sh.offAllDevice();
-console.log(sh.getDevices());
+console.log(sh.devices);
