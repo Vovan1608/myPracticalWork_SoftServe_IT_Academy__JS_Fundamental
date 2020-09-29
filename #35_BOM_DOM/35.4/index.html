@@ -12,12 +12,14 @@
         <div>Блок текста №2</div>
         <p>Абзац №3</p>
         <script>
-            var allElements = document.body.children;
-            var pElements = [];
+            'use strict';
+
+            let allElements = document.body.children;
+            let pElements = [];
             // Ваш код
 
             for(let i = 0; i < allElements.length; i++){
-                if(document.body.children[i].tagName === "P"){
+                if(allElements[i].tagName === "P"){
                     pElements.push(allElements[i].innerHTML);
                 }
             }

@@ -10,7 +10,12 @@
         <div><i>Привет мир!</i></div>
         <script>
             // Ваш код
+            "use strict";
+
+            let allElements = document.body.children;
             
+            [allElements[0].innerHTML, allElements[1].innerHTML] = 
+            [allElements[1].innerHTML, allElements[0].innerHTML]
         </script>
     </body>
 </html>
