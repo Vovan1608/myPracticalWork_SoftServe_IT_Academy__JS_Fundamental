@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>Это</div>
+        <div>Элементы</div>
+        <script>
+            function insertAfter(elem, refElem) {
+                // Ваш код
+                "use strict";
+
+                if(refElem === document.body.firstChild){
+                    return document.body.children[0].after(elem);
+                }
+                if(refElem === document.body.lastChild){
+                    return document.body.lastChild.after(elem.cloneNode(true));
+                }
+            }
+            var e = document.createElement("div");
+            e.innerHTML = "<b>Новый элемент</b>";
+            var b = document.body;
+            insertAfter(e, b.firstChild); // Вставка после первого элемента
+            insertAfter(e, b.lastChild); // Вставка за последним элементом
+        </script>
+    </body>
+</html>
