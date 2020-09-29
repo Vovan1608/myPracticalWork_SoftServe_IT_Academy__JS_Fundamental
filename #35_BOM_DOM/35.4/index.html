@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>Блок текста №1</div>
+        <p>Абзац №1</p>
+        <p>Абзац №2</p>
+        <div>Блок текста №2</div>
+        <p>Абзац №3</p>
+        <script>
+            var allElements = document.body.children;
+            var pElements = [];
+            // Ваш код
+
+            for(let i = 0; i < document.body.children.length; i++){
+                if(document.body.children[i].tagName === "P"){
+                    pElements.push(allElements[i].innerHTML);
+                }
+            }
+            alert(pElements.length); // Должно вывести 3
+            console.log(pElements);
+        </script>
+    </body>
+</html>
