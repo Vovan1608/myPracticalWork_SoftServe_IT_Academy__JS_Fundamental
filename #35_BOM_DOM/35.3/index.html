@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form name="authForm">
+            Логин:<br />
+            <input type="text" name="log" /><br />
+            Пароль:<br />
+            <input type="text" name="pass" /><br />
+            <button name="signIn">Войти</button>
+        </form>
+        <script>
+            // Ваш код
+            'use strict';
+
+            let formByName = document.forms.authForm;
+            let formByNumber = document.forms[0];
+            let firstInput = formByName.elements.log;
+            let getButton = formByName.signIn;
+
+            console.log(formByName);
+            console.log(formByNumber);
+            console.log(firstInput);
+            console.log(getButton);
+        </script>
+    </body>
+</html>
