@@ -28,5 +28,8 @@ fetch("https://reqres.in/api/users/5")
         console.log(response);
         return fetch("https://reqres.in/api/users/10")
     })
-    .then((response) => console.log(response))
+    .then((response) =>{
+        response.json();
+        console.log(response)
+    })
     .catch((err) => console.log(err))
