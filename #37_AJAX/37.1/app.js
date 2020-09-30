@@ -11,9 +11,11 @@
 
 fetch("https://reqres.in/api/users/5")
     .then((response) => {
+        console.log(response);
         return response.json();
     })
     .then( (data) => {
+        console.log(data);
         return fetch("https://reqres.in/api/users/", {
             method: "POST",
             body: JSON.stringify(data),
@@ -23,6 +25,7 @@ fetch("https://reqres.in/api/users/5")
         })
     })
     .then((response) => {
+        console.log(response);
         return fetch("https://reqres.in/api/users/10")
     })
     .then((response) => console.log(response))
