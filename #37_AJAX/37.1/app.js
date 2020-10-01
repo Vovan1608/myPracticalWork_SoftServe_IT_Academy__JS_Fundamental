@@ -11,7 +11,6 @@
 
 fetch("https://reqres.in/api/users/5")
     .then((response) => {
-        console.log(response);
         return response.json();
     })
     .then( (data) => {
@@ -29,7 +28,9 @@ fetch("https://reqres.in/api/users/5")
         return fetch("https://reqres.in/api/users/10")
     })
     .then((response) =>{
-        response.json();
-        console.log(response)
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data);
     })
     .catch((err) => console.log(err))
