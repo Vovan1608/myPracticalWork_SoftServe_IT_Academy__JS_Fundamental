@@ -15,13 +15,13 @@
             "use strict";
 
             let butRed = document.body.children[1];
-            butRed.onclick = () => document.getElementById("color").style.color = "red";
+            butRed.addEventListener("click", () => document.getElementById("color").style.color = "red");
 
             let butBlue = document.body.children[2];
-            butBlue.onclick = () => document.getElementById("color").style.color = "blue";
+            butBlue.addEventListener ("click", () => document.getElementById("color").style.color = "blue");
 
             let reset = document.body.children[3];
-            reset.onclick = () => document.getElementById("color").style.color = "black";
+            reset.addEventListener ("click", () => document.getElementById("color").style.color = "black");
 
         </script>
     </body>
