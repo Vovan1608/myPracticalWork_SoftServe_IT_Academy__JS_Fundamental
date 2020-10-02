@@ -34,3 +34,26 @@ fetch("https://reqres.in/api/users/5")
         console.log(data);
     })
     .catch((err) => console.log(err))
+
+
+// async function getData () {
+    
+//     let response = await fetch ("https://reqres.in/api/users/5");
+    
+//     let data = await response.json();
+    
+//     return data;
+// }
+
+// async function postData() {
+//     let post = await fetch("https://reqres.in/api/users/", {
+//         method: "POST",
+//         body: JSON.stringify(getData()),
+//         headers: {
+//             "Content-Type": "application/json"
+//         }
+//     })
+// }
+
+// let g = getData();
+// console.log(g)
