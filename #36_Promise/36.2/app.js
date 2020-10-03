@@ -22,13 +22,13 @@ new Promise(function (resolve, reject) {
     
     // Если пользователь ввел не число - вызвать reject()
     if(isNaN(number) || number === null || number === ""){
-        return reject (error);
+        reject ();
     }else{
     
         // Если пользователь ввел число - вызвать resolve(number)
         resolve(number);
     }
-}).catch(function (error) {
+}).catch(function () {
     return new Promise(function (resolve, reject) {
         
         // Запрашиваем у пользователя число number, пока он его не введет
