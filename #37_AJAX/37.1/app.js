@@ -51,8 +51,7 @@ async function getPostGetData() {
     console.log(response);
     response = await fetch ("https://reqres.in/api/users/10");
     data = await response.json();
-    console.log(data)
-    return data;
+    console.log(data);
 }
 
 getPostGetData()
